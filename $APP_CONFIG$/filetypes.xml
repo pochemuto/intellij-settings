@@ -1,0 +1,16 @@
+<application>
+  <component name="FileTypeManager" version="13">
+    <ignoreFiles list="*.hprof;*.iml;*.orig;*.pdf;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.bundle;.git;.hg;.idea;.svn;.texpadtmp;CVS;RCS;SCCS;__pycache__;_svn;rcs;vssver.scc;vssver2.scc;" />
+    <extensionMap>
+      <mapping ext="tex" type="Native" />
+      <mapping ext="md" type="Native" />
+      <mapping pattern="conffiles" type="PLAIN_TEXT" />
+      <mapping pattern="extractor" type="PLAIN_TEXT" />
+      <mapping pattern=".gitattributes" type="PLAIN_TEXT" />
+      <mapping ext="genp" type="PLAIN_TEXT" />
+      <mapping ext="processor" type="PLAIN_TEXT" />
+      <mapping pattern="points.xml" type="XML" />
+      <mapping ext="svg" type="XML" />
+    </extensionMap>
+  </component>
+</application>

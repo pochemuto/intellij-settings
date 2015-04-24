@@ -1,0 +1,13 @@
+<templateSet group="other">
+  <template name="mn" value="$VAR$ = Math.min($VAR$, $END$);" description="Sets lesser value to a variable" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="VAR" expression="variableOfType(&quot;double&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="mx" value="$VAR$ = Math.max($VAR$, $END$);" description="Sets greater value to a variable" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="VAR" expression="variableOfType(&quot;double&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context />
+  </template>
+  <template name="psvm" value="public static void main(String[] args){&#10;  $END$&#10;}" description="main() method declaration" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <context />
+  </template>
+</templateSet>

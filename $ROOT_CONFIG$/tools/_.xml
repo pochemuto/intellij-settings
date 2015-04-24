@@ -1,0 +1,23 @@
+<toolSet name="External Tools">
+  <tool name="Sublime Text 2" description="Open file in Sublime Text 2" showInMainMenu="true" showInEditor="true" showInProject="true" showInSearchPopup="true" disabled="false" useConsole="false" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" />
+      <option name="PARAMETERS" value="&quot;$FileName$:$SelectionEndLine$:$SelectionEndColumn$&quot;" />
+      <option name="WORKING_DIRECTORY" value="$FileDir$" />
+    </exec>
+  </tool>
+  <tool name="Update basex" description="Обновить локальную базу BASEX" showInMainMenu="true" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="true" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="C:\Users\a.kramarev\workspace\jsc_mercury\basex\addall_quick.bat" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="C:/Users/a.kramarev/workspace/jsc_mercury/basex" />
+    </exec>
+  </tool>
+  <tool name="Show in Total Commander" showInMainMenu="false" showInEditor="true" showInProject="true" showInSearchPopup="true" disabled="true" useConsole="false" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="false">
+    <exec>
+      <option name="COMMAND" value="C:\Users\a.kramarev\Dropbox\Portable\Total Commander\App\TotalCommander\TOTALCMD.EXE" />
+      <option name="PARAMETERS" value="/O /S &quot;$FilePath$&quot;" />
+      <option name="WORKING_DIRECTORY" value="C:/Users/a.kramarev/Dropbox/Portable/Total Commander/App/TotalCommander" />
+    </exec>
+  </tool>
+</toolSet>

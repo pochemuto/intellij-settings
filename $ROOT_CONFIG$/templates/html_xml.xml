@@ -1,0 +1,112 @@
+<templateSet group="html/xml">
+  <template name="t" value="&lt;$TAG$ $ATTRS$&gt;$END$&lt;/$TAG_NAME$&gt;" description="Tag pair" toReformat="true" toShortenFQNames="true">
+    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ATTRS" expression="" defaultValue="&quot;&quot;" alwaysStopAt="false" />
+    <variable name="TAG_NAME" expression="firstWord(TAG)" defaultValue="&quot;&quot;" alwaysStopAt="false" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="XSL_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="T" value="&lt;$TAG$&gt;$SELECTION$&lt;/$TAGNAME$&gt;&#10;" description="Surround with &lt;tag&gt;&lt;/tag&gt;" toReformat="true" toShortenFQNames="true">
+    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TAGNAME" expression="firstWord(TAG)" defaultValue="&quot;&quot;" alwaysStopAt="false" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="CD" value="&lt;![CDATA[&#10;$SELECTION$&#10;]]&gt;" description="Surround with CDATA section" toReformat="false" toShortenFQNames="false">
+    <context>
+      <option name="XSL_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="bind" value="&lt;mimic:bind&gt;&#10;&#9;&lt;bg param=&quot;$PARAM1$&quot; ac=&quot;$COLOR1$&quot; ic=&quot;$COLOR2$&quot; /&gt;&#10;&#9;&lt;brdr param=&quot;$PARAM2$&quot; ac=&quot;$COLOR3$&quot; ic=&quot;$COLOR4$&quot; /&gt;&#10;&lt;/mimic:bind&gt;" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="PARAM1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="COLOR1" expression="enum(&quot;royalblue&quot;,&quot;red&quot;, &quot;green&quot;)" defaultValue="&quot;royalblue&quot;" alwaysStopAt="true" />
+    <variable name="COLOR2" expression="enum(&quot;lightgray&quot;)" defaultValue="&quot;lightgray&quot;" alwaysStopAt="true" />
+    <variable name="PARAM2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="COLOR3" expression="enum(&quot;green&quot;)" defaultValue="&quot;green&quot;" alwaysStopAt="true" />
+    <variable name="COLOR4" expression="enum(&quot;red&quot;,&quot;yellow&quot;,&quot;black&quot;,&quot;gray&quot;)" defaultValue="&quot;red&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="tmsrc" value="&lt;mimic:TMSource " toReformat="false" toShortenFQNames="true" deactivated="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="true" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="genp" value="&lt;GenericParameter index=&quot;$INDEX$&quot; tmSystem=&quot;$SYSTEM$&quot; spaceship=&quot;СМ&quot; rev=&quot;1&quot;&gt;&#10;        &lt;Arguments&gt;&#10;            $ARGUMENTS$&#10;        &lt;/Arguments&gt;&#10;        &lt;Expression&gt;$EXPRESSION$&lt;/Expression&gt;&#10;    &lt;/GenericParameter&gt;" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <variable name="INDEX" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="SYSTEM" expression="" defaultValue="ОБОБЩ" alwaysStopAt="true" />
+    <variable name="ARGUMENTS" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EXPRESSION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="false" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="&lt;!" value="&lt;!-- $END$ --&gt;" description="Comment" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="row" value="&lt;tr&gt;&#10;    &lt;th&gt;$END$&lt;/th&gt;&#10;    &lt;td&gt;&#10;        &#10;    &lt;/td&gt;&#10;    &lt;th/&gt;&#10;    &lt;td/&gt;&#10;&lt;/tr&gt;" description="Строка в редакторе параметров" toReformat="false" toShortenFQNames="true" deactivated="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="help" value="help=&quot;{messages.$END$}&quot;" description="Строка в редакторе параметров" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+</templateSet>

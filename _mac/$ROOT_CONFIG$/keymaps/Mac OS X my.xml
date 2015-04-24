@@ -1,0 +1,147 @@
+<keymap version="1" name="Mac OS X my" parent="Mac OS X">
+  <action id="ActivateDatabaseToolWindow">
+    <keyboard-shortcut first-keystroke="control D" />
+  </action>
+  <action id="ActivateTerminalToolWindow" />
+  <action id="Back">
+    <mouse-shortcut keystroke="button4" />
+    <keyboard-shortcut first-keystroke="control LEFT" />
+  </action>
+  <action id="CloseAllUnpinnedEditors">
+    <keyboard-shortcut first-keystroke="shift meta W" />
+  </action>
+  <action id="CloseContent">
+    <keyboard-shortcut first-keystroke="meta F4" />
+    <keyboard-shortcut first-keystroke="meta W" />
+  </action>
+  <action id="Compare.SameVersion">
+    <keyboard-shortcut first-keystroke="alt S" second-keystroke="C" />
+    <keyboard-shortcut first-keystroke="alt C" />
+  </action>
+  <action id="CompareDirs" />
+  <action id="CompareJars" />
+  <action id="CompareTwoFiles" />
+  <action id="Console.TableResult.EditValueMaximized">
+    <keyboard-shortcut first-keystroke="shift ENTER" />
+    <keyboard-shortcut first-keystroke="meta alt ENTER" />
+  </action>
+  <action id="DatabaseView.CopyAction" />
+  <action id="DatabaseView.ShowDiff" />
+  <action id="Diff.PrevChange">
+    <keyboard-shortcut first-keystroke="meta alt LEFT" />
+  </action>
+  <action id="Diff.UpdatedFiles" />
+  <action id="EditorAddOrRemoveCaret">
+    <mouse-shortcut keystroke="shift alt button1" />
+    <mouse-shortcut keystroke="alt button2" />
+  </action>
+  <action id="EditorCloneCaretAbove">
+    <keyboard-shortcut first-keystroke="shift control UP" />
+  </action>
+  <action id="EditorCloneCaretBelow">
+    <keyboard-shortcut first-keystroke="shift control DOWN" />
+  </action>
+  <action id="EditorDeleteLine">
+    <keyboard-shortcut first-keystroke="meta D" />
+  </action>
+  <action id="EditorDuplicate" />
+  <action id="EditorDuplicateLines">
+    <keyboard-shortcut first-keystroke="shift meta D" />
+  </action>
+  <action id="EditorPasteFromX11" />
+  <action id="EditorSelectWord">
+    <keyboard-shortcut first-keystroke="control W" />
+  </action>
+  <action id="EditorStartNewLineBefore">
+    <keyboard-shortcut first-keystroke="shift alt ENTER" />
+  </action>
+  <action id="EditorUnSelectWord">
+    <keyboard-shortcut first-keystroke="shift control W" />
+  </action>
+  <action id="FindUsagesInFile">
+    <keyboard-shortcut first-keystroke="meta alt F7" />
+  </action>
+  <action id="Forward">
+    <mouse-shortcut keystroke="button5" />
+    <keyboard-shortcut first-keystroke="control RIGHT" />
+    <mouse-shortcut keystroke="control button1" />
+  </action>
+  <action id="Git.Push" />
+  <action id="GotoAction">
+    <keyboard-shortcut first-keystroke="shift meta A" />
+    <keyboard-shortcut first-keystroke="shift meta P" />
+  </action>
+  <action id="GotoDeclaration">
+    <keyboard-shortcut first-keystroke="meta B" />
+    <mouse-shortcut keystroke="meta button1" />
+  </action>
+  <action id="GotoTypeDeclaration">
+    <keyboard-shortcut first-keystroke="shift control B" />
+    <mouse-shortcut keystroke="shift meta button1" />
+  </action>
+  <action id="GuiDesigner.Duplicate" />
+  <action id="LocalHistory.ShowHistory">
+    <keyboard-shortcut first-keystroke="shift alt H" />
+  </action>
+  <action id="NewScratchFile">
+    <keyboard-shortcut first-keystroke="control T" />
+  </action>
+  <action id="NextEditorTab">
+    <keyboard-shortcut first-keystroke="control meta RIGHT" />
+  </action>
+  <action id="NextSplitter">
+    <keyboard-shortcut first-keystroke="alt TAB" />
+    <keyboard-shortcut first-keystroke="control B" second-keystroke="N" />
+  </action>
+  <action id="NextTab">
+    <keyboard-shortcut first-keystroke="shift control RIGHT" />
+  </action>
+  <action id="PinActiveTab">
+    <keyboard-shortcut first-keystroke="alt P" />
+  </action>
+  <action id="PrevSplitter">
+    <keyboard-shortcut first-keystroke="shift alt TAB" />
+    <keyboard-shortcut first-keystroke="control B" second-keystroke="P" />
+  </action>
+  <action id="PreviousEditorTab">
+    <keyboard-shortcut first-keystroke="control meta LEFT" />
+  </action>
+  <action id="PreviousTab">
+    <keyboard-shortcut first-keystroke="shift control LEFT" />
+  </action>
+  <action id="SafeDelete">
+    <keyboard-shortcut first-keystroke="meta DELETE" />
+    <keyboard-shortcut first-keystroke="meta BACK_SPACE" />
+  </action>
+  <action id="ShowUsages">
+    <keyboard-shortcut first-keystroke="meta F7" />
+  </action>
+  <action id="SplitHorizontally">
+    <keyboard-shortcut first-keystroke="control B" second-keystroke="shift QUOTE" />
+  </action>
+  <action id="SplitVertically">
+    <keyboard-shortcut first-keystroke="control B" second-keystroke="shift 5" />
+  </action>
+  <action id="SwitchApply">
+    <keyboard-shortcut first-keystroke="control alt ENTER" />
+  </action>
+  <action id="SwitchDown">
+    <keyboard-shortcut first-keystroke="control alt DOWN" />
+  </action>
+  <action id="SwitchLeft">
+    <keyboard-shortcut first-keystroke="control alt LEFT" />
+  </action>
+  <action id="SwitchRight">
+    <keyboard-shortcut first-keystroke="control alt RIGHT" />
+  </action>
+  <action id="SwitchUp">
+    <keyboard-shortcut first-keystroke="control alt UP" />
+  </action>
+  <action id="Uml.ShowDiff" />
+  <action id="Unsplit">
+    <keyboard-shortcut first-keystroke="control B" second-keystroke="X" />
+  </action>
+  <action id="Vcs.ShowTabbedFileHistory">
+    <keyboard-shortcut first-keystroke="alt H" />
+  </action>
+</keymap>
