@@ -1,0 +1,32 @@
+<templateSet group="Logging">
+  <template name="logw" value="LOGGER.warn(&quot;$END$&quot;);" description="Log warning" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="false" />
+    </context>
+  </template>
+  <template name="logd" value="LOGGER.debug(&quot;$END$&quot;);" description="Log debug" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="false" />
+    </context>
+  </template>
+  <template name="loge" value="LOGGER.error(&quot;$END$&quot;);" description="Log error" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="false" />
+    </context>
+  </template>
+  <template name="logt" value="LOGGER.trace(&quot;$END$&quot;);" description="Log trace" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="false" />
+    </context>
+  </template>
+  <template name="logi" value="LOGGER.info(&quot;$END$&quot;);" description="Log info" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="false" />
+    </context>
+  </template>
+</templateSet>

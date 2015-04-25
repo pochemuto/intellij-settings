@@ -1,4 +1,4 @@
-<scheme name="Solarized Dark" version="141" parent_scheme="Default">
+<scheme name="Solarized Dark" version="124" parent_scheme="Default">
   <option name="LINE_SPACING" value="1.2" />
   <option name="EDITOR_FONT_SIZE" value="13" />
   <option name="EDITOR_FONT_NAME" value="Monospaced" />
@@ -3053,7 +3053,7 @@
     <option name="WRITE_IDENTIFIER_UNDER_CARET_ATTRIBUTES">
       <value>
         <option name="BACKGROUND" value="432c38" />
-        <option name="ERROR_STRIPE_COLOR" value="f0adf0" />
+        <option name="ERROR_STRIPE_COLOR" value="ffcce5" />
       </value>
     </option>
     <option name="WRITE_SEARCH_RESULT_ATTRIBUTES">

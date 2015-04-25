@@ -1,20 +1,9 @@
 <application>
   <component name="FindSettings">
-    <option name="customScope" value="selection" />
-    <option name="defaultScopeName" value="selection" />
-    <option name="SEARCH_SCOPE" value="selection" />
-    <recentFileMasks>
-      <mask>*.html</mask>
-      <mask>*.jsp</mask>
-      <mask>*.js</mask>
-      <mask>*.as</mask>
-      <mask>*.mxml</mask>
-      <mask>*.property</mask>
-      <mask>*.properties</mask>
-      <mask>ivy.xml</mask>
-      <mask>*.java</mask>
-      <mask>*.xml</mask>
-      <mask>*.css</mask>
-    </recentFileMasks>
+    <option name="customScope" value="Project and Libraries" />
+    <option name="defaultScopeName" value="Project and Libraries" />
+    <option name="regularExpressions" value="true" />
+    <option name="REGULAR_EXPRESSIONS" value="true" />
+    <option name="SEARCH_SCOPE" value="Project and Libraries" />
   </component>
 </application>

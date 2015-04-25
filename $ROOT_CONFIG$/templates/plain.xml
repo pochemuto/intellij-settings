@@ -85,14 +85,15 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="todo" value="//TODO $END$ (pochemuto)" description="todo comment" toReformat="false" toShortenFQNames="true">
+  <template name="log" value="private final static Logger LOGGER = LoggerFactory.getLogger($CLASS_NAME$.class);" description="Create logger" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
       <option name="XSL_TEXT" value="false" />
       <option name="XML" value="false" />
       <option name="JAVA_CODE" value="false" />
-      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_STATEMENT" value="false" />
       <option name="JAVA_EXPRESSION" value="false" />
       <option name="JAVA_DECLARATION" value="true" />
       <option name="JAVA_COMMENT" value="false" />

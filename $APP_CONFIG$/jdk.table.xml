@@ -1,6 +1,58 @@
 <application>
   <component name="ProjectJdkTable">
     <jdk version="2">
+      <name value="1.7 u25" />
+      <type value="JavaSDK" />
+      <version value="java version &quot;1.7.0_25&quot;" />
+      <homePath value="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home" />
+      <roots>
+        <annotationsPath>
+          <root type="composite">
+            <root type="simple" url="jar://$APPLICATION_HOME_DIR$/lib/jdkAnnotations.jar!/" />
+          </root>
+        </annotationsPath>
+        <classPath>
+          <root type="composite">
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/lib/ant-javafx.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/lib/dt.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/lib/javafx-doclet.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/lib/javafx-mx.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/lib/jconsole.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/lib/sa-jdi.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/lib/tools.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/charsets.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/deploy.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/htmlconverter.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/javaws.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/jce.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/jfr.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/jfxrt.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/JObjC.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/jsse.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/management-agent.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/plugin.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/resources.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/rt.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/ext/dnsns.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/ext/localedata.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/ext/sunec.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/jre/lib/ext/zipfs.jar!/" />
+          </root>
+        </classPath>
+        <javadocPath>
+          <root type="composite" />
+        </javadocPath>
+        <sourcePath>
+          <root type="composite">
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home/src.zip!/" />
+          </root>
+        </sourcePath>
+      </roots>
+      <additional />
+    </jdk>
+    <jdk version="2">
       <name value="1.6" />
       <type value="JavaSDK" />
       <version value="java version &quot;1.6.0_65&quot;" />
@@ -31,6 +83,7 @@
             <root type="simple" url="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunjce_provider.jar!/" />
             <root type="simple" url="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext/sunpkcs11.jar!/" />
             <root type="simple" url="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/bundle/Classes/classes.jar!/" />
+            <root type="simple" url="file://$USER_HOME$/Documents/workspace/python-dev/bin" />
           </root>
         </classPath>
         <javadocPath>
@@ -45,10 +98,100 @@
       <additional />
     </jdk>
     <jdk version="2">
+      <name value="Python 2.7.6 (/Library/Frameworks/Python.framework/Versions/2.7/bin/python)" />
+      <type value="Python SDK" />
+      <version value="Python 2.7.6" />
+      <homePath value="/Library/Frameworks/Python.framework/Versions/2.7/bin/python" />
+      <roots>
+        <annotationsPath>
+          <root type="composite" />
+        </annotationsPath>
+        <classPath>
+          <root type="composite">
+            <root type="simple" url="file:///Library/Python/2.7/site-packages/lxml-2.3.5-py2.7-macosx-10.8-intel.egg" />
+            <root type="simple" url="file:///Library/Python/2.7/site-packages/pip-1.1-py2.7.egg" />
+            <root type="simple" url="file:///Library/Python/2.7/site-packages/bpython-0.12-py2.7.egg" />
+            <root type="simple" url="file:///Library/Python/2.7/site-packages/Pygments-1.6rc1-py2.7.egg" />
+            <root type="simple" url="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7" />
+            <root type="simple" url="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin" />
+            <root type="simple" url="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac" />
+            <root type="simple" url="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages" />
+            <root type="simple" url="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk" />
+            <root type="simple" url="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload" />
+            <root type="simple" url="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages" />
+            <root type="simple" url="file:///Library/Python/2.7/site-packages" />
+            <root type="simple" url="file://$USER_HOME$/Library/Caches/IntelliJIdea12/python_stubs/-1698384448" />
+            <root type="simple" url="file:///Library/Python/2.7/site-packages/eyeD3-0.7.5-py2.7.egg" />
+            <root type="simple" url="jar:///Library/Python/2.7/site-packages/python_magic-0.4.6-py2.7.egg!/" />
+            <root type="simple" url="jar:///Library/Python/2.7/site-packages/beautifulsoup4-4.3.2-py2.7.egg!/" />
+            <root type="simple" url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/python-skeletons" />
+          </root>
+        </classPath>
+        <javadocPath>
+          <root type="composite" />
+        </javadocPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional />
+    </jdk>
+    <jdk version="2">
+      <name value="1.7 u51" />
+      <type value="JavaSDK" />
+      <version value="java version &quot;1.7.0_51&quot;" />
+      <homePath value="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home" />
+      <roots>
+        <annotationsPath>
+          <root type="composite">
+            <root type="simple" url="jar://$APPLICATION_HOME_DIR$/lib/jdkAnnotations.jar!/" />
+          </root>
+        </annotationsPath>
+        <classPath>
+          <root type="composite">
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/lib/ant-javafx.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/lib/dt.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/lib/javafx-doclet.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/lib/javafx-mx.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/lib/jconsole.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/lib/sa-jdi.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/lib/tools.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/charsets.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/deploy.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/htmlconverter.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/javaws.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/jce.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/jfr.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/jfxrt.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/jsse.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/management-agent.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/plugin.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/resources.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/rt.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/ext/dnsns.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/ext/localedata.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/ext/sunec.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib/ext/zipfs.jar!/" />
+          </root>
+        </classPath>
+        <javadocPath>
+          <root type="composite" />
+        </javadocPath>
+        <sourcePath>
+          <root type="composite">
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/src.zip!/" />
+          </root>
+        </sourcePath>
+      </roots>
+      <additional />
+    </jdk>
+    <jdk version="2">
       <name value="1.8" />
       <type value="JavaSDK" />
-      <version value="java version &quot;1.8.0_25&quot;" />
-      <homePath value="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home" />
+      <version value="java version &quot;1.8.0&quot;" />
+      <homePath value="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home" />
       <roots>
         <annotationsPath>
           <root type="composite">
@@ -57,32 +200,33 @@
         </annotationsPath>
         <classPath>
           <root type="composite">
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/lib/ant-javafx.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/lib/dt.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/lib/javafx-mx.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/lib/jconsole.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/lib/sa-jdi.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/lib/tools.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/charsets.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/deploy.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/javaws.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jce.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jfr.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jfxswt.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/jsse.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/management-agent.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/plugin.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/resources.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/rt.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/ext/cldrdata.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/ext/dnsns.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/ext/jfxrt.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/ext/localedata.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/ext/nashorn.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/ext/sunec.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/jre/lib/ext/zipfs.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/lib/ant-javafx.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/lib/dt.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/lib/javafx-mx.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/lib/jconsole.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/lib/sa-jdi.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/lib/tools.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/charsets.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/deploy.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/htmlconverter.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/javaws.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jce.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jfr.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jfxswt.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/jsse.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/management-agent.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/plugin.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/resources.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/rt.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext/cldrdata.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext/dnsns.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext/jfxrt.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext/localedata.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext/nashorn.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext/sunec.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/jre/lib/ext/zipfs.jar!/" />
           </root>
         </classPath>
         <javadocPath>
@@ -90,91 +234,89 @@
         </javadocPath>
         <sourcePath>
           <root type="composite">
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/javafx-src.zip!/" />
+            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/src.zip!/" />
           </root>
         </sourcePath>
       </roots>
       <additional />
     </jdk>
     <jdk version="2">
-      <name value="1.7" />
-      <type value="JavaSDK" />
-      <version value="java version &quot;1.7.0_71&quot;" />
-      <homePath value="/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home" />
+      <name value="Java(TM) Platform Micro Edition SDK 3.0" />
+      <type value="MobileSDK" />
+      <version value="java version &quot;1.8.0&quot;" />
+      <homePath value="/Applications/Java_ME_SDK_3.0.app/Contents/Resources" />
       <roots>
         <annotationsPath>
-          <root type="composite">
-            <root type="simple" url="jar://$APPLICATION_HOME_DIR$/lib/jdkAnnotations.jar!/" />
-          </root>
+          <root type="composite" />
         </annotationsPath>
         <classPath>
           <root type="composite">
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/lib/ant-javafx.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/lib/dt.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/lib/javafx-doclet.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/lib/javafx-mx.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/lib/jconsole.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/lib/sa-jdi.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/lib/tools.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/charsets.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/deploy.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/htmlconverter.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/javaws.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jce.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jfr.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jfxrt.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/jsse.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/management-agent.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/plugin.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/resources.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/rt.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext/dnsns.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext/localedata.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext/sunec.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar!/" />
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/jre/lib/ext/zipfs.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/cldc_1.0.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/cldc_1.1.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr082_1.1.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr120_1.1.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr135_1.2.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr172_1.0-base.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr172_1.0-xmlrpc.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr172_1.0.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr177_1.0-apdu.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr177_1.0-crypto.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr177_1.0-jcrmi.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr177_1.0-pki.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr177_1.0.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr179_1.0.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr180_1.1.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr184_1.1.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr205_2.0.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr211_1.0.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr226_1.0.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr229_1.1.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr234_1.0.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr238_1.0.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr256_1.2.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr280_1.0.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/jsr75_1.0.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/midp_1.0.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/midp_2.0.jar!/" />
+            <root type="simple" url="jar:///Applications/Java_ME_SDK_3.0.app/Contents/Resources/lib/midp_2.1.jar!/" />
           </root>
         </classPath>
         <javadocPath>
-          <root type="composite" />
+          <root type="composite">
+            <root type="simple" url="http://docs.oracle.com/javame/config/cldc/ref-impl/midp2.0/" />
+          </root>
         </javadocPath>
         <sourcePath>
-          <root type="composite">
-            <root type="simple" url="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/src.zip!/" />
-          </root>
+          <root type="composite" />
         </sourcePath>
       </roots>
-      <additional />
+      <additional>
+        <javaJDK name="1.8" />
+        <emulator name="Unified Emulator Type" profile="MIDP-1.0,MIDP-2.0,MIDP-2.1" configuration="CLDC-1.0,CLDC-1.1" customProfile="MIDP-1.0,MIDP-2.0,MIDP-2.1" customConfiguration="CLDC-1.0,CLDC-1.1" />
+        <preverify />
+      </additional>
     </jdk>
     <jdk version="2">
-      <name value="Python 2.7.9 (/usr/local/bin/python)" />
+      <name value="Python 2.7.6 virtualenv at ~/Documents/workspace/python-dev/env" />
       <type value="Python SDK" />
-      <version value="Python 2.7.9" />
-      <homePath value="/usr/local/bin/python" />
+      <version value="Python 2.7.6" />
+      <homePath value="$USER_HOME$/Documents/workspace/python-dev/env/bin/python" />
       <roots>
         <annotationsPath>
           <root type="composite" />
         </annotationsPath>
         <classPath>
           <root type="composite">
-            <root type="simple" url="jar:///usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/setuptools-12.0.5-py2.7.egg!/" />
-            <root type="simple" url="file:///usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pip-6.0.8-py2.7.egg" />
-            <root type="simple" url="file:///Library/Python/2.7/site-packages/bpython-0.13.1-py2.7.egg" />
-            <root type="simple" url="file:///Library/Python/2.7/site-packages/Pygments-2.0.1-py2.7.egg" />
-            <root type="simple" url="jar:///usr/local/lib/python2.7/site-packages/setuptools-12.0.5-py2.7.egg!/" />
-            <root type="simple" url="file:///usr/local/lib/python2.7/site-packages/pip-6.0.8-py2.7.egg" />
-            <root type="simple" url="file:///usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/python2.7" />
-            <root type="simple" url="file:///usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin" />
-            <root type="simple" url="file:///usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac" />
-            <root type="simple" url="file:///usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages" />
-            <root type="simple" url="file:///usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk" />
-            <root type="simple" url="file:///usr/local/Cellar/python/2.7.9/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload" />
-            <root type="simple" url="file:///Library/Python/2.7/site-packages" />
-            <root type="simple" url="file:///usr/local/lib/python2.7/site-packages" />
+            <root type="simple" url="file://$USER_HOME$/Documents/workspace/python-dev/env/lib/python2.7" />
+            <root type="simple" url="file://$USER_HOME$/Documents/workspace/python-dev/env/lib/python2.7/lib-dynload" />
+            <root type="simple" url="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7" />
+            <root type="simple" url="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin" />
+            <root type="simple" url="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk" />
+            <root type="simple" url="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac" />
+            <root type="simple" url="file:///Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages" />
+            <root type="simple" url="file://$USER_HOME$/Documents/workspace/python-dev/env/lib/python2.7/site-packages" />
             <root type="simple" url="file://$APPLICATION_PLUGINS_DIR$/python/helpers/python-skeletons" />
-            <root type="simple" url="file://$USER_HOME$/Library/Caches/IntelliJIdea14/python_stubs/-923448878" />
+            <root type="simple" url="file://$USER_HOME$/Library/Caches/IntelliJIdea14/python_stubs/27106879" />
           </root>
         </classPath>
         <javadocPath>

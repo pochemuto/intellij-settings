@@ -7,6 +7,7 @@
     <EXCLUDED_PACKAGE NAME="antlr.collections" />
     <EXCLUDED_PACKAGE NAME="com.jensoft.sw2d.core" />
     <EXCLUDED_PACKAGE NAME="com.sun.istack" />
+    <EXCLUDED_PACKAGE NAME="com.sun.java" />
     <EXCLUDED_PACKAGE NAME="com.sun.javafx.collections" />
     <EXCLUDED_PACKAGE NAME="com.sun.javafx.tools" />
     <EXCLUDED_PACKAGE NAME="com.sun.media.jfxmedia" />
@@ -14,20 +15,15 @@
     <EXCLUDED_PACKAGE NAME="com.sun.prism" />
     <EXCLUDED_PACKAGE NAME="com.sun.tools" />
     <EXCLUDED_PACKAGE NAME="com.sun.xml.internal" />
-    <EXCLUDED_PACKAGE NAME="java.awt" />
     <EXCLUDED_PACKAGE NAME="java.awt.List" />
-    <EXCLUDED_PACKAGE NAME="javafx.util" />
     <EXCLUDED_PACKAGE NAME="javax.help" />
     <EXCLUDED_PACKAGE NAME="javax.print" />
     <EXCLUDED_PACKAGE NAME="javax.xml.soap" />
-    <EXCLUDED_PACKAGE NAME="net.spy.memcached" />
     <EXCLUDED_PACKAGE NAME="org.hibernate.mapping" />
     <EXCLUDED_PACKAGE NAME="org.hibernate.metamodel" />
     <EXCLUDED_PACKAGE NAME="org.hsqldb" />
     <EXCLUDED_PACKAGE NAME="org.jdesktop.swingx.decorator" />
-    <EXCLUDED_PACKAGE NAME="org.jruby" />
     <EXCLUDED_PACKAGE NAME="org.omg" />
-    <EXCLUDED_PACKAGE NAME="ru.yandex.utils.Pair" />
     <EXCLUDED_PACKAGE NAME="sun.plugin" />
   </component>
   <component name="JavaCodeFoldingSettings">
