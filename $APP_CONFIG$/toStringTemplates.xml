@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <application>
   <component name="ToStringTemplates">
     <option name="defaultTempalteName" value="String concat (+)" />
@@ -20,22 +21,15 @@
           <option name="template" value="public java.lang.String toString() {&#10;final java.lang.StringBuilder sb = new java.lang.StringBuilder(&quot;$classname{&quot;);&#10;#set ($i = 0)&#10;#foreach ($member in $members)&#10;#if ($i == 0)&#10;sb.append(&quot;##&#10;#else&#10;sb.append(&quot;, ##&#10;#end&#10;#if ($member.string)&#10;$member.name='&quot;)##&#10;#else&#10;$member.name=&quot;)##&#10;#end&#10;#if ($member.primitiveArray || $member.objectArray)&#10;.append(java.util.Arrays.toString($member.name));&#10;#elseif ($member.string)&#10;.append($member.accessor).append('\'');&#10;#else&#10;.append($member.accessor);&#10;#end&#10;#set ($i = $i + 1)&#10;#end&#10;sb.append('}');&#10;return sb.toString();&#10;}" />
         </TemplateResource>
         <TemplateResource>
-          <option name="fileName" value="ToStringBuilder (Apache commons-lang)" />
+          <option name="fileName" value="ToStringBuilder (Apache Commons)" />
           <option name="template" value="public java.lang.String toString() {&#10;   return new org.apache.commons.lang.builder.ToStringBuilder(this)&#10;#foreach ($member in $members)&#10;   .append(&quot;$member.name&quot;, $member.accessor)&#10;#end&#10;   .toString();&#10;}" />
-        </TemplateResource>
-        <TemplateResource>
-          <option name="fileName" value="ToStringBuilder (Apache commons-lang 3)" />
-          <option name="template" value="public java.lang.String toString() {&#10;   return new org.apache.commons.lang3.builder.ToStringBuilder(this)&#10;#foreach ($member in $members)&#10;   .append(&quot;$member.name&quot;, $member.accessor)&#10;#end&#10;   .toString();&#10;}" />
         </TemplateResource>
         <TemplateResource>
           <option name="fileName" value="Objects.toStringHelper (Guava)" />
           <option name="template" value="public java.lang.String toString() {&#10;return com.google.common.base.Objects.toStringHelper(this)&#10;#foreach ($member in $members)&#10;.add(&quot;$member.name&quot;, $member.accessor)&#10;#end&#10;.toString();&#10;}&#10;" />
         </TemplateResource>
-        <TemplateResource>
-          <option name="fileName" value="Groovy: String concat (+)" />
-          <option name="template" value="public java.lang.String toString() {&#10;#if ( $members.size() &gt; 0 )&#10;#set ( $i = 0 )&#10;    return &quot;&quot;&quot;\&#10;$classname{&#10;#foreach( $member in $members )&#10;#if ( $i &gt; 0 ), &#10;#end&#10;#set($d = &quot;$&quot;)&#10;#if ( $member.objectArray )&#10;    $member.name=${d}{java.util.Arrays.toString($member.accessor)}## &#10;#elseif ( $member.primitiveArray)&#10;    $member.name=${d}{java.util.Arrays.toString($member.accessor)}##&#10;#elseif ( $member.string )&#10;    $member.name='$d$member.accessor'##&#10;#else&#10;    $member.name=$d${member.accessor}##&#10;#end&#10;#set ( $i = $i + 1 )&#10;#end&#10;&#10;}&quot;&quot;&quot;&#10;#else&#10;    return &quot;$classname{}&quot;&#10;#end&#10;}" />
-        </TemplateResource>
       </list>
     </option>
   </component>
 </application>
+

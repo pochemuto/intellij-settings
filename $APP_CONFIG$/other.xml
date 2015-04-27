@@ -2,15 +2,12 @@
   <component name="CodeStyleSchemes">
     <option name="CURRENT_SCHEME_NAME" value="Default" />
   </component>
-  <component name="CodeStyleSchemesUIConfiguration">
-    <option name="RECENT_IMPORT_FILE_LOCATION" value="file:$USER_HOME$/workspace/svn/libraries/trunk/rbuild/src/tools/market-style.xml" />
-  </component>
   <component name="DebuggerSettings">
     <option name="TRACING_FILTERS_ENABLED" value="true" />
     <option name="FORCE_CLASSIC_VM" value="true" />
     <option name="SKIP_SYNTHETIC_METHODS" value="true" />
     <option name="SKIP_CLASSLOADERS" value="true" />
-    <option name="RUN_HOTSWAP_AFTER_COMPILE" value="RunHotswapAsk" />
+    <option name="RUN_HOTSWAP_AFTER_COMPILE" value="RunHotswapAlways" />
     <option name="COMPILE_BEFORE_HOTSWAP" value="true" />
     <filter>
       <option name="PATTERN" value="com.sun.*" />
@@ -53,152 +50,92 @@
       <option name="ENABLED" value="true" />
     </filter>
   </component>
-  <component name="DependencyUISettings">
-    <option name="UI_GROUP_BY_SCOPE_TYPE" value="false" />
+  <component name="GlobalAntConfiguration">
+    <filtersTableLayout />
+    <propertiesTableLayout />
   </component>
-  <component name="ExternalResourceManagerImpl">
-    <resource url="http://ant.apache.org/ivy/schemas/ivy.xsd" location="$USER_HOME$/Library/Caches/IntelliJIdea14/extResources/869a15b5_ivy.xsd" />
+  <component name="JavaFxSettings">
+    <option name="pathToSceneBuilder" value="/Applications/JavaFX Scene Builder 2.0.app" />
+    <option name="myPathToSceneBuilder" value="/Applications/JavaFX Scene Builder 2.0.app" />
   </component>
-  <component name="GwtSdkManager">
-    <gwt-sdk-list>
-      <gwt-sdk url="file://$USER_HOME$/projects/libs/gwt-2.5.1" />
-      <gwt-sdk url="file://$USER_HOME$/workspace/svn/libraries/trunk/common-gwt/gwt-lib/gwt-2.4.0" />
-      <gwt-sdk url="file://$USER_HOME$/svn/libraries/trunk/common-gwt/gwt-lib/gwt-2.4.0" />
-      <gwt-sdk url="file://$USER_HOME$/projects/libs/gwt-2.6.1" />
-    </gwt-sdk-list>
+  <component name="PropertiesSeparatorManager">
+    <file url="file://$USER_HOME$/IdeaProjects/let-me-read/src/test/resources/vkapi.properties" separator="\u002e" />
+    <file url="file://$USER_HOME$/IdeaProjects/let-me-read/src/main/webapp/WEB-INF/logging.properties" separator="\u002e" />
+    <file url="file://$USER_HOME$/Documents/workspace/forum-parser/src/main/resources/configurations/www.alfisti.by.properties" separator="\u002e" />
+    <file url="file://$USER_HOME$/IdeaProjects/let-me-read/src/main/resources/vkapi.properties" separator="\u002e" />
   </component>
-  <component name="ImportFilteringUsageViewSetting">
-    <option name="SHOW_IMPORTS" value="false" />
-  </component>
-  <component name="LastSelectedPropertiesFileStore" lastSelectedFileUrl="file://$USER_HOME$/workspace/svn/robot/trunk/market-knowledge/src/script/servant.properties">
-    <entry context="file://$USER_HOME$/workspace/svn/robot/trunk/market-knowledge/src/script" url="file://$USER_HOME$/workspace/svn/robot/trunk/market-knowledge/src/script/servant.properties" />
-    <entry context="file://$USER_HOME$/workspace/svn/robot/trunk/market-knowledge/src/script/market-knowledge.xml" url="file://$USER_HOME$/workspace/svn/robot/trunk/market-knowledge/src/script/servant.properties" />
-  </component>
-  <component name="RecentTaskRepositories">
-    <Generic shared="false" url="https://st.yandex-team.ru">
-      <commitMessageFormat>{id} {summary}</commitMessageFormat>
-      <option name="downloadTasksInSeparateRequests" value="false" />
-      <password>df9bdf9adf9adfebdfc7dfdadfcfdfd8</password>
-      <option name="loginAnonymously" value="false" />
-      <option name="loginMethodType" value="GET" />
-      <option name="loginUrl" value="https://passport.yandex-team.ru/passport?retpath=https%3A%2F%2Fpassport.yandex-team.ru%2Fauth%2Flogin-status.html&amp;idkey=&amp;yu=&amp;login={username}&amp;password={password}" />
-      <option name="preferredCloseTaskState" />
-      <option name="preferredOpenTaskState" />
-      <option name="responseHandlers">
-        <XPathResponseHandler>
-          <selectors>
-            <selector name="tasks" path="" />
-            <selector name="id" path="" />
-            <selector name="summary" path="" />
-            <selector name="description" path="" />
-            <selector name="updated" path="" />
-            <selector name="created" path="" />
-            <selector name="closed" path="" />
-            <selector name="issueUrl" path="" />
-            <selector name="singleTask-id" path="" />
-            <selector name="singleTask-summary" path="" />
-            <selector name="singleTask-description" path="" />
-            <selector name="singleTask-updated" path="" />
-            <selector name="singleTask-created" path="" />
-            <selector name="singleTask-closed" path="" />
-            <selector name="singleTask-issueUrl" path="" />
-          </selectors>
-        </XPathResponseHandler>
-        <JsonResponseHandler>
-          <selectors>
-            <selector name="tasks" path="" />
-            <selector name="id" path="" />
-            <selector name="summary" path="" />
-            <selector name="description" path="" />
-            <selector name="updated" path="" />
-            <selector name="created" path="" />
-            <selector name="closed" path="" />
-            <selector name="issueUrl" path="" />
-            <selector name="singleTask-id" path="" />
-            <selector name="singleTask-summary" path="" />
-            <selector name="singleTask-description" path="" />
-            <selector name="singleTask-updated" path="" />
-            <selector name="singleTask-created" path="" />
-            <selector name="singleTask-closed" path="" />
-            <selector name="singleTask-issueUrl" path="" />
-          </selectors>
-        </JsonResponseHandler>
-        <RegExResponseHandler>
-          <option name="taskRegex" value="" />
-        </RegExResponseHandler>
-      </option>
-      <option name="responseType" value="XML" />
-      <option name="shouldFormatCommitMessage" value="false" />
-      <option name="singleTaskMethodType" value="GET" />
-      <option name="singleTaskUrl" value="" />
-      <option name="subtypeName" />
-      <option name="tasksListMethodType" value="GET" />
-      <option name="tasksListUrl" value="https://st.yandex-team.ru/export/issues.xml?filter.resolution=empty()&amp;filter.related=pochemuto&amp;fields=type,priority,dueDate,status,resolution,assignee,project,tags,updated,weight&amp;" />
-      <option name="templateVariables">
-        <list />
-      </option>
-      <option name="useHttpAuthentication" value="false" />
-      <option name="useProxy" value="false" />
-      <username>pochemuto</username>
-      <option name="PREDEFINED_TEMPLATE_VARIABLES">
-        <list>
-          <FactoryVariable hidden="false" shownOnFirstTab="false">
-            <option name="description" value="" />
-            <option name="name" value="serverUrl" />
-            <option name="readOnly" value="true" />
-            <option name="value" value="https://st.yandex-team.ru" />
-          </FactoryVariable>
-          <FactoryVariable hidden="false" shownOnFirstTab="false">
-            <option name="description" value="" />
-            <option name="name" value="username" />
-            <option name="readOnly" value="true" />
-            <option name="value" value="pochemuto" />
-          </FactoryVariable>
-          <FactoryVariable hidden="true" shownOnFirstTab="false">
-            <option name="description" value="" />
-            <option name="name" value="password" />
-            <option name="readOnly" value="true" />
-            <option name="value" value="100Amper" />
-          </FactoryVariable>
-        </list>
-      </option>
-    </Generic>
+  <component name="PyTestFrameworkService">
+    <option name="SDK_TO_PYTEST">
+      <map>
+        <entry key="$USER_HOME$/Documents/workspace/python-dev/env/bin/python" value="false" />
+      </map>
+    </option>
   </component>
   <component name="RefactoringSettings">
-    <option name="RENAME_SEARCH_IN_COMMENTS_FOR_PACKAGE" value="false" />
     <option name="RENAME_SEARCH_IN_COMMENTS_FOR_CLASS" value="false" />
-    <option name="RENAME_SEARCH_FOR_TEXT_FOR_PACKAGE" value="false" />
     <option name="RENAME_SEARCH_FOR_TEXT_FOR_CLASS" value="false" />
     <option name="MOVE_PREVIEW_USAGES" value="false" />
-    <option name="MOVE_INNER_PREVIEW_USAGES" value="false" />
+    <option name="MOVE_SEARCH_IN_COMMENTS" value="false" />
+    <option name="MOVE_SEARCH_FOR_TEXT" value="false" />
     <option name="INTRODUCE_FIELD_VISIBILITY" value="private" />
-    <option name="INTRODUCE_LOCAL_CREATE_FINALS" value="true" />
+    <option name="INTRODUCE_LOCAL_CREATE_FINALS" value="false" />
   </component>
   <component name="SelectProjectTemplateSettings">
     <option name="EXPERT_MODE" value="true" />
+    <option name="LAST_TEMPLATE" value="Java/Maven" />
   </component>
-  <component name="SvnApplicationSettings">
-    <option name="myCheckoutURLs">
-      <list>
-        <option value="https://svn.yandex.ru/market/libraries/trunk/rbuild/" />
-        <option value="https://svn.yandex.ru/market/robot/trunk/" />
-      </list>
+  <component name="SvgViewer.Settings">
+    <option name="PLUGIN_ENABLED" value="true" />
+  </component>
+  <component name="SystemNotifications">
+    <option name="NOTIFICATIONS">
+      <set>
+        <option value="Compiler (errors)" />
+        <option value="Compiler (success)" />
+        <option value="Maven" />
+        <option value="TestRunner" />
+      </set>
     </option>
-    <option name="myTypedURLs">
-      <list>
-        <option value="https://svn.yandex.ru/market/libraries/trunk/rbuild/" />
-        <option value="https://svn.yandex.ru/market/robot/trunk/" />
-      </list>
+  </component>
+  <component name="VFSTestFrameworkListener">
+    <option name="SDK_TO_PYTEST">
+      <map>
+        <entry key="/Library/Frameworks/Python.framework/Versions/2.7/bin/python" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="WebServicesPluginSettings" WebServicesUrlPathPrefix="/services" ASK_TO_INSTALL_SOAPUI="true" />
+  <component name="XPathView.XPathViewPlugin">
+    <option name="attributes">
+      <TextAttributes />
+    </option>
+    <option name="contextAttributes">
+      <TextAttributes />
     </option>
   </component>
   <component name="com.intellij.ide.fileTemplates.impl.FileTemplateManagerImpl">
     <recent_templates>
       <option name="RECENT_TEMPLATES">
         <value>
-          <list size="0" />
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="JavaFXApplication" />
+            <item index="1" class="java.lang.String" itemvalue="FXML" />
+          </list>
         </value>
       </option>
     </recent_templates>
   </component>
-  <component name="com.intellij.openapi.diff.impl.external.DiffManagerImpl" HIGHLIGHT_MODE="BY_WORD" />
+  <component name="com.intellij.javaee.ExternalResourceManagerImpl">
+    <ignored-resource url="http://relaxng.org/ns/compatibility/annotations/1.0" />
+    <ignored-resource url="urn:idea:xslt-plugin#extensions" />
+    <ignored-resource url="http://www.w3.org/1998/Math/MathML" />
+    <ignored-resource url="http://exslt.org/dates-and-times" />
+    <ignored-resource url="http://exslt.org/math" />
+    <ignored-resource url="http://exslt.org/dynamic" />
+    <ignored-resource url="http://exslt.org/common" />
+    <ignored-resource url="http://exslt.org/sets" />
+    <ignored-resource url="http://exslt.org/strings" />
+    <ignored-resource url="http://jakarta.apache.org/log4j/" />
+    <ignored-resource url="http://www.w3.org/2000/svg" />
+  </component>
 </application>

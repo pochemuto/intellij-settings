@@ -2,7 +2,7 @@
   <component name="LocalDatabaseDriverManager">
     <driver id="db2.base" name="DB2" dialect="DB2">
       <option name="auto-sync" value="false" />
-      <driver id="db2" name="DB2 LUW">
+      <driver id="db2" name="DB2 LUW" dialect="DB2">
         <property name="retrieveMessagesFromServerOnGetMessage" value="true" />
       </driver>
       <driver id="db2.jtopen" name="JTOpen (DB2 iSeries)" dialect="DB2" />
@@ -17,12 +17,12 @@
     </driver>
     <driver id="sqlserver" name="SQL Server" dialect="TSQL">
       <option name="auto-sync" value="false" />
-      <driver id="sqlserver.jtds" name="jTds" />
+      <driver id="sqlserver.jtds" name="jTDS" />
       <driver id="sqlserver.ms" name="Microsoft" />
     </driver>
     <driver id="sybase" name="Sybase" dialect="Sybase">
       <option name="auto-sync" value="false" />
-      <driver id="sybase.jtds" name="jTds" />
+      <driver id="sybase.jtds" name="jTDS" />
       <driver id="sybase.ase" name="Native" />
     </driver>
     <driver id="mysql" name="MySQL" dialect="MySQL">
@@ -32,22 +32,16 @@
       <property name="characterEncoding" value="utf8" />
       <property name="characterSetResults" value="utf8" />
       <property name="yearIsDateType" value="false" />
+      <library>
+        <url>file://$USER_HOME$/Library/Preferences/IntelliJIdea13/jdbc-drivers/mysql-connector-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/Library/Preferences/IntelliJIdea13/jdbc-drivers/mysql-connector-java-5.1.26-bin.jar</url>
+      </library>
     </driver>
     <driver id="oracle" name="Oracle" dialect="Oracle">
       <option name="auto-sync" value="false" />
       <option name="auto-commit" value="false" />
-      <library>
-        <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/oracle-driver-license.txt</url>
-      </library>
-      <library>
-        <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/xdb6-11.2.0.4.jar</url>
-      </library>
-      <library>
-        <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/xmlparserv2.jar</url>
-      </library>
-      <library>
-        <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/ojdbc6-11.2.0.4.jar</url>
-      </library>
     </driver>
     <driver id="postgresql" name="PostgreSQL" dialect="PostgreSQL">
       <option name="auto-sync" value="true" />

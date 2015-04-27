@@ -1,13 +1,13 @@
 <application>
   <component name="CodeInsightSettings">
     <option name="AUTO_POPUP_JAVADOC_INFO" value="true" />
-    <option name="ADD_IMPORTS_ON_PASTE" value="1" />
     <option name="USE_INSTANCEOF_ON_EQUALS_PARAMETER" value="true" />
     <option name="OPTIMIZE_IMPORTS_ON_THE_FLY" value="true" />
     <option name="ADD_UNAMBIGIOUS_IMPORTS_ON_THE_FLY" value="true" />
     <EXCLUDED_PACKAGE NAME="antlr.collections" />
     <EXCLUDED_PACKAGE NAME="com.jensoft.sw2d.core" />
     <EXCLUDED_PACKAGE NAME="com.sun.istack" />
+    <EXCLUDED_PACKAGE NAME="com.sun.java" />
     <EXCLUDED_PACKAGE NAME="com.sun.javafx.collections" />
     <EXCLUDED_PACKAGE NAME="com.sun.javafx.tools" />
     <EXCLUDED_PACKAGE NAME="com.sun.media.jfxmedia" />
@@ -15,20 +15,15 @@
     <EXCLUDED_PACKAGE NAME="com.sun.prism" />
     <EXCLUDED_PACKAGE NAME="com.sun.tools" />
     <EXCLUDED_PACKAGE NAME="com.sun.xml.internal" />
-    <EXCLUDED_PACKAGE NAME="java.awt" />
     <EXCLUDED_PACKAGE NAME="java.awt.List" />
-    <EXCLUDED_PACKAGE NAME="javafx.util" />
     <EXCLUDED_PACKAGE NAME="javax.help" />
     <EXCLUDED_PACKAGE NAME="javax.print" />
     <EXCLUDED_PACKAGE NAME="javax.xml.soap" />
-    <EXCLUDED_PACKAGE NAME="net.spy.memcached" />
     <EXCLUDED_PACKAGE NAME="org.hibernate.mapping" />
     <EXCLUDED_PACKAGE NAME="org.hibernate.metamodel" />
     <EXCLUDED_PACKAGE NAME="org.hsqldb" />
     <EXCLUDED_PACKAGE NAME="org.jdesktop.swingx.decorator" />
-    <EXCLUDED_PACKAGE NAME="org.jruby" />
     <EXCLUDED_PACKAGE NAME="org.omg" />
-    <EXCLUDED_PACKAGE NAME="ru.yandex.utils.Pair" />
     <EXCLUDED_PACKAGE NAME="sun.plugin" />
   </component>
   <component name="JavaCodeFoldingSettings">
