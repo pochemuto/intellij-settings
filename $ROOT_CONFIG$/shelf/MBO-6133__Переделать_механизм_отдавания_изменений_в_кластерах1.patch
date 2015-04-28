@@ -1,0 +1,530 @@
+Index: ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/db/VisualClusterService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/db/VisualClusterService.java	(revision 204180)
++++ ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/db/VisualClusterService.java	(revision )
+@@ -88,36 +88,6 @@
+         void process(T c) throws Exception;
+     }
+ 
+-    public static class ClusterChangeHistory {
+-        private static final String NEW_ID  = "new_id";
+-        private static final String OLD_ID  = "old_id";
+-        private static final String NUM     = "num";
+-        private static final String CREATED = "created";
+-        private final long newId;
+-        private final long oldId;
+-        private final int count;
+-        private final Date created;
+-
+-        public ClusterChangeHistory(long newId, long oldId, int count, Date created) {
+-            this.newId = newId;
+-            this.oldId = oldId;
+-            this.count = count;
+-            this.created = created;
+-        }
+-        public long getNewId() {
+-            return newId;
+-        }
+-        public long getOldId() {
+-            return oldId;
+-        }
+-        public int getCount() {
+-            return count;
+-        }
+-        public Date getCreated() {
+-            return created;
+-        }
+-    }
+-
+     public VisualCluster createCluster(VisualCluster cl) {
+         cl.id = MongoHelper.autoIncrement("entities", mongo.getDb());
+         cl.createDate = new Date(System.currentTimeMillis());
+@@ -241,15 +211,15 @@
+         Criteria doesntHaveDeletedDate = where(VisualCluster.DELETED_DATE).exists(false);
+ 
+         return new Criteria().orOperator(
+-                new Criteria().andOperator(category, notDeleted),
+-                new Criteria().andOperator(
+-                        category,
+-                        deleted,
+-                        new Criteria().orOperator(
+-                                deletedLessThan2daysAgo,
+-                                doesntHaveDeletedDate
+-                        )
+-                )
++            new Criteria().andOperator(category, notDeleted),
++            new Criteria().andOperator(
++                category,
++                deleted,
++                new Criteria().orOperator(
++                    deletedLessThan2daysAgo,
++                    doesntHaveDeletedDate
++                )
++            )
+         );
+     }
+ 
+@@ -506,16 +476,16 @@
+ 
+         mongo.executeQuery(query(where(VisualCluster.DELETED).is(true)
+                 .and(VisualCluster.DELETED_DATE).lt(now.getTime()).gt(prev.getTime())), CLUSTERS_COLLECTION,
+-                new DocumentCallbackHandler() {
+-                    @Override
+-                    public void processDocument(DBObject dbObject) throws MongoException, DataAccessException {
+-                        try {
+-                            p.process((Long) dbObject.get(VisualCluster.ID));
+-                        } catch (Exception e) {
+-                            throw new RuntimeException(e);
+-                        }
+-                    }
+-                }
++            new DocumentCallbackHandler() {
++                @Override
++                public void processDocument(DBObject dbObject) throws MongoException, DataAccessException {
++                    try {
++                        p.process((Long) dbObject.get(VisualCluster.ID));
++                    } catch (Exception e) {
++                        throw new RuntimeException(e);
++                    }
++                }
++            }
+         );
+     }
+ 
+@@ -570,6 +540,10 @@
+         }
+     }
+ 
++    public void saveClusterChange(ClusterChangeHistory c) {
++        mongo.save(c);
++    }
++
+     private void readMapReduceResult(Processor<ClusterChangeHistory> processor) {
+         for (DBObject object : mongo.getCollection(MAP_REDUCE_COLLECTION).find()) {
+             DBObject value = (DBObject) object.get("value");
+@@ -578,16 +552,35 @@
+             } else
+             if (value.containsField(ClusterChangeHistory.NUM)) {
+                 try {
+-                    Long newId = VisualClusterReadConverter.castToLong(value.get(ClusterChangeHistory.NEW_ID), null);
+-                    Long oldId = VisualClusterReadConverter.castToLong(value.get(ClusterChangeHistory.OLD_ID), null);
+-                    Long num = VisualClusterReadConverter.castToLong(value.get(ClusterChangeHistory.NUM), null);
+-                    Date created = (Date) value.get(ClusterChangeHistory.CREATED);
+-                    processor.process(new ClusterChangeHistory(newId, oldId, num.intValue(), created));
++                    processor.process(convertToHistory(value));
+                 } catch (Exception e) {
+-                    throw new IllegalStateException("Failture while parsing clusters history", e);
++                    throw new IllegalStateException("Failure while parsing clusters history", e);
+                 }
+             }
+         }
++    }
++
++    public void processClustersChangeHistoryFromDB(final long startTime, final long endTime,
++                                             final Processor<ClusterChangeHistory> processor) {
++        Date startDate = new Date(startTime);
++        Date endDate = new Date(endTime);
++        DBCollection collection = mongo.getCollection(mongo.getCollectionName(ClusterChangeHistory.class));
++        DBObject query = where(ClusterChangeHistory.CREATED).gte(startDate).lt(endDate).getCriteriaObject();
++        for (DBObject value : collection.find(query)) {
++            try {
++                processor.process(convertToHistory(value));
++            } catch (Exception e) {
++                throw new IllegalStateException("Failure while parsing clusters history", e);
++            }
++        }
++    }
++
++    private ClusterChangeHistory convertToHistory(DBObject value) {
++        Long newId = VisualClusterReadConverter.castToLong(value.get(ClusterChangeHistory.NEW_ID), null);
++        Long oldId = VisualClusterReadConverter.castToLong(value.get(ClusterChangeHistory.OLD_ID), null);
++        Long num = VisualClusterReadConverter.castToLong(value.get(ClusterChangeHistory.NUM), null);
++        Date created = (Date) value.get(ClusterChangeHistory.CREATED);
++        return new ClusterChangeHistory(newId, oldId, num.intValue(), created);
+     }
+ 
+     private boolean compareInfo(Map<String, String> info, Map<String, String> info0) {
+Index: ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/db/ClusterChangeHistory.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/db/ClusterChangeHistory.java	(revision )
++++ ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/db/ClusterChangeHistory.java	(revision )
+@@ -0,0 +1,47 @@
++package ru.yandex.market.mbo.db;
++
++import org.springframework.data.annotation.PersistenceConstructor;
++import org.springframework.data.mongodb.core.mapping.Document;
++
++import java.util.Date;
++
++/**
++ * @author Alexander Kramarev (https://staff.yandex-team.ru/pochemuto/)
++ * @date 28.04.2015
++ */
++@Document(collection = "cluster_history")
++public class ClusterChangeHistory {
++    public static final String NEW_ID = "new_id";
++    public static final String OLD_ID = "old_id";
++    public static final String NUM = "num";
++    public static final String CREATED = "created";
++
++    private final long newId;
++    private final long oldId;
++    private final int count;
++    private final Date created;
++
++    @PersistenceConstructor
++    public ClusterChangeHistory(long newId, long oldId, int count, Date created) {
++        this.newId = newId;
++        this.oldId = oldId;
++        this.count = count;
++        this.created = created;
++    }
++
++    public long getNewId() {
++        return newId;
++    }
++
++    public long getOldId() {
++        return oldId;
++    }
++
++    public int getCount() {
++        return count;
++    }
++
++    public Date getCreated() {
++        return created;
++    }
++}
+Index: ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/imports/clusters/ImportVisualClustersService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/imports/clusters/ImportVisualClustersService.java	(revision 204180)
++++ ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/imports/clusters/ImportVisualClustersService.java	(revision )
+@@ -8,6 +8,7 @@
+ import ru.yandex.common.util.collections.CollectionUtils;
+ import ru.yandex.common.util.collections.Pair;
+ import ru.yandex.common.util.date.TimerUtils;
++import ru.yandex.market.mbo.db.ClusterChangeHistory;
+ import ru.yandex.market.mbo.db.Offer;
+ import ru.yandex.market.mbo.db.VisualCluster;
+ import ru.yandex.market.mbo.db.VisualClusterService;
+@@ -241,6 +242,7 @@
+             // Создаём новый кластер
+             VisualCluster newCluster = visualClusterService.createCluster(importingCluster);
+             // Помечаем кластера из которых объединён новый, как удалённые
++            Set<String> newClusterOffers = new HashSet<>(importingCluster.getOfferIds());
+             for (Long oldClusterId : importingCluster.getOldClusters()) {
+                 VisualCluster oldCluster = visualClusterService.getCluster(oldClusterId, true);
+                 if (oldCluster != null) {
+@@ -250,6 +252,10 @@
+                     newClusters.add(newCluster.getId());
+                     oldCluster.setNewClusters(newClusters);
+                     visualClusterService.updateCluster(oldCluster);
++
++                    Set<String> oldClusterOffers = new HashSet<>(oldCluster.getOfferIds());
++                    oldClusterOffers.retainAll(newClusterOffers);
++                    storeChangeHistory(oldCluster, newCluster, oldClusterOffers.size());
+                 } else {
+                     log.warn(String.format("Cluster %d was not found", oldClusterId));
+                 }
+@@ -257,6 +263,7 @@
+         } else if (changeType.equalsIgnoreCase(CHANGE_DIVISION)) {
+             // Создаём новый кластер
+             VisualCluster newCluster = visualClusterService.createCluster(importingCluster);
++            Set<String> newClusterOffers = new HashSet<>(importingCluster.getOfferIds());
+             // В списке old-clusters должен быть
+             // единственный id, который является id разделённого кластера
+             long dividedId = importingCluster.getOldClusters().iterator().next();
+@@ -269,11 +276,21 @@
+                 newClusters.add(newCluster.getId());
+                 dividedCluster.setNewClusters(newClusters);
+                 visualClusterService.updateCluster(dividedCluster);
++
++                Set<String> dividedClusterOffers = new HashSet<>(dividedCluster.getOfferIds());
++                dividedClusterOffers.retainAll(newClusterOffers);
++                storeChangeHistory(dividedCluster, newCluster, dividedClusterOffers.size());
+             } else {
+                 log.warn(String.format("Cluster %d was not found", dividedId));
+             }
+         }
+         return removedClusterIds;
++    }
++
++    private void storeChangeHistory(VisualCluster oldCluster, VisualCluster newCluster, int count) {
++        ClusterChangeHistory c =
++            new ClusterChangeHistory(newCluster.getId(), oldCluster.getId(), count, newCluster.getCreateDate());
++        visualClusterService.saveClusterChange(c);
+     }
+ 
+     public void processCategory(final Long categoryId, final boolean forceImport,
+Index: ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/imports/clusters/ExportClustersChangesService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/imports/clusters/ExportClustersChangesService.java	(revision 204180)
++++ ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/imports/clusters/ExportClustersChangesService.java	(revision )
+@@ -2,11 +2,13 @@
+ 
+ import org.apache.log4j.Logger;
+ import ru.yandex.common.services.fs.EllipticFileStorageService;
++import ru.yandex.common.util.functional.Callback;
++import ru.yandex.market.mbo.db.ClusterChangeHistory;
+ import ru.yandex.market.mbo.db.VisualClusterService;
+ 
+ import javax.annotation.Resource;
+ import java.io.ByteArrayInputStream;
+-import java.util.*;
++import java.util.Date;
+ 
+ /**
+  * @author amaslak
+@@ -49,18 +51,18 @@
+         final StringBuilder sb = new StringBuilder();
+         sb.append(String.format("%d %d%n", startPeriodTime, endPeriodTime));
+         visualClusterService.processClustersChangeHistory(startPeriodTime, endPeriodTime,
+-                new VisualClusterService.Processor<VisualClusterService.ClusterChangeHistory>() {
++            new VisualClusterService.Processor<ClusterChangeHistory>() {
+-                    @Override
++                @Override
+-                    public void process(VisualClusterService.ClusterChangeHistory c) throws Exception {
++                public void process(ClusterChangeHistory c) throws Exception {
+-                        sb.append(String.format(
+-                                "%d %d %d %d%n",
+-                                c.getCreated().getTime(),
+-                                c.getNewId(),
+-                                c.getOldId(),
+-                                c.getCount()
+-                        ));
+-                    }
+-                }, canCache
++                    sb.append(String.format(
++                        "%d %d %d %d%n",
++                        c.getCreated().getTime(),
++                        c.getNewId(),
++                        c.getOldId(),
++                        c.getCount()
++                    ));
++                }
++            }, canCache
+         );
+         String result = null;
+         try {
+@@ -78,5 +80,17 @@
+             return result;
+         }
+         return result;
++    }
++
++    public void exportClustersChangesFromDb(Long startPeriodTime, Long endPeriodTime,
++                                            final Callback<ClusterChangeHistory> processor) {
++
++        visualClusterService.processClustersChangeHistoryFromDB(startPeriodTime, endPeriodTime,
++            new VisualClusterService.Processor<ClusterChangeHistory>() {
++                @Override
++                public void process(ClusterChangeHistory c) throws Exception {
++                    processor.doWith(c);
++                }
++            });
+     }
+ }
+Index: ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/ru/yandex/market/export/clusters/ExportClustersChangesAbstractServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/ru/yandex/market/export/clusters/ExportClustersChangesAbstractServlet.java	(revision )
++++ ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/ru/yandex/market/export/clusters/ExportClustersChangesAbstractServlet.java	(revision )
+@@ -0,0 +1,45 @@
++package ru.yandex.market.export.clusters;
++
++import org.apache.log4j.Logger;
++import ru.yandex.market.mbo.core.httpserver.XmlServlet;
++import ru.yandex.market.mbo.imports.clusters.ExportClustersChangesService;
++
++import javax.annotation.Resource;
++import javax.servlet.http.HttpServletRequest;
++import java.io.IOException;
++import java.io.PrintWriter;
++
++/**
++ * @author Alexander Kramarev (https://staff.yandex-team.ru/pochemuto/)
++ * @date 28.04.2015
++ */
++public abstract class ExportClustersChangesAbstractServlet extends XmlServlet {
++    private static final Logger log = Logger.getLogger(ExportClustersChangesAbstractServlet.class);
++
++    @Resource(name = "exportClustersChangesService")
++    protected ExportClustersChangesService exportClustersChangesService;
++
++    @Override
++    protected void writeXml(HttpServletRequest httpServletRequest, PrintWriter writer) {
++        try {
++            String start = httpServletRequest.getParameter("startTime");
++            Long startPeriodTime = Long.parseLong(start);
++            String end = httpServletRequest.getParameter("endTime");
++            Long endPeriodTime;
++            if (end == null || end.trim().length() == 0) {
++                endPeriodTime = System.currentTimeMillis();
++            } else {
++                endPeriodTime = Long.parseLong(end);
++            }
++            boolean canUseOld = httpServletRequest.getParameter("nocache") == null;
++
++            writeData(httpServletRequest, writer, startPeriodTime, endPeriodTime, canUseOld);
++        } catch (IOException e) {
++            log.error(e);
++            throw new RuntimeException("Unable to import", e);
++        }
++    }
++
++    protected abstract void writeData(HttpServletRequest httpServletRequest, PrintWriter writer,
++                                      Long startPeriodTime, Long endPeriodTime, boolean canUseOld) throws IOException;
++}
+Index: ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/config/mbo-http-exporter/http-exporter-config.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/config/mbo-http-exporter/http-exporter-config.xml	(revision 204180)
++++ ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/config/mbo-http-exporter/http-exporter-config.xml	(revision )
+@@ -214,6 +214,7 @@
+     <bean id="navigationServlet" class="ru.yandex.market.export.navigation.CatalogNavigationServlet"/>
+     
+     <bean id="exportClustersChangesServlet" class="ru.yandex.market.export.clusters.ExportClustersChangesServlet"/>
++    <bean id="exportClustersChangesServletFromDb" class="ru.yandex.market.export.clusters.ExportClustersChangesFromDbServlet"/>
+ 
+     <bean id="categoryTreeYamlServlet" class="ru.yandex.market.export.categories.CategoryTreeYamlServlet"/>
+ 
+@@ -248,6 +249,7 @@
+                 <entry key="cataloger-mobile-dump" value-ref="catalogerMobileDumpServlet"/>
+                 <entry key="category-parameters" value-ref="categoryParmetersYamlServlet"/>
+                 <entry key="clusters-changes" value-ref="exportClustersChangesServlet"/>
++                <entry key="clusters-changes-v2" value-ref="exportClustersChangesServletFromDb"/>
+                 <entry key="ping" value-ref="pingServlet"/>
+             </map>
+         </property>
+Index: ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/ru/yandex/market/export/clusters/ExportClustersChangesFromDbServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/ru/yandex/market/export/clusters/ExportClustersChangesFromDbServlet.java	(revision )
++++ ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/ru/yandex/market/export/clusters/ExportClustersChangesFromDbServlet.java	(revision )
+@@ -0,0 +1,36 @@
++package ru.yandex.market.export.clusters;
++
++import ru.yandex.common.util.functional.Callback;
++import ru.yandex.market.mbo.db.ClusterChangeHistory;
++
++import javax.servlet.http.HttpServletRequest;
++import java.io.IOException;
++import java.io.PrintWriter;
++
++/**
++ * @author Alexander Kramarev (https://staff.yandex-team.ru/pochemuto/)
++ * @date 28.04.2015
++ */
++public class ExportClustersChangesFromDbServlet extends ExportClustersChangesAbstractServlet {
++
++    @Override
++    protected void writeData(HttpServletRequest httpServletRequest, final PrintWriter writer,
++                             Long startPeriodTime, Long endPeriodTime, boolean canUseOld) throws IOException {
++
++        writer.write(String.format("%d %d%n", startPeriodTime, endPeriodTime));
++
++        exportClustersChangesService.exportClustersChangesFromDb(startPeriodTime, endPeriodTime,
++            new Callback<ClusterChangeHistory>() {
++            @Override
++            public void doWith(ClusterChangeHistory c) {
++                writer.write(String.format(
++                    "%d %d %d %d%n",
++                    c.getCreated().getTime(),
++                    c.getNewId(),
++                    c.getOldId(),
++                    c.getCount()
++                ));
++            }
++        });
++    }
++}
+Index: ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/ru/yandex/market/export/clusters/ExportClustersChangesServlet.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/ru/yandex/market/export/clusters/ExportClustersChangesServlet.java	(revision 204180)
++++ ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/ru/yandex/market/export/clusters/ExportClustersChangesServlet.java	(revision )
+@@ -2,10 +2,7 @@
+ 
+ import org.apache.log4j.Logger;
+ import ru.yandex.common.util.xml.XmlWriter;
+-import ru.yandex.market.mbo.core.httpserver.XmlServlet;
+-import ru.yandex.market.mbo.imports.clusters.ExportClustersChangesService;
+ 
+-import javax.annotation.Resource;
+ import javax.servlet.http.HttpServletRequest;
+ import java.io.IOException;
+ import java.io.PrintWriter;
+@@ -13,39 +10,22 @@
+ /**
+  * @author york
+  */
+-public class ExportClustersChangesServlet extends XmlServlet {
++public class ExportClustersChangesServlet extends ExportClustersChangesAbstractServlet {
+ 
+     private static final Logger log = Logger.getLogger(ExportClustersChangesServlet.class);
+ 
+-    @Resource(name = "exportClustersChangesService")
+-    private ExportClustersChangesService exportClustersChangesService;
+-
+     @Override
+-    protected void writeXml(HttpServletRequest httpServletRequest, PrintWriter writer) {
++    protected void writeData(HttpServletRequest httpServletRequest,  PrintWriter writer,
++                             Long startPeriodTime, Long endPeriodTime, boolean canUseOld) throws IOException {
++
+         XmlWriter xml = new XmlWriter(writer);
+-        try {
+-            String start = httpServletRequest.getParameter("startTime");
+-            Long startPeriodTime = Long.parseLong(start);
+-            String end = httpServletRequest.getParameter("endTime");
+-            Long endPeriodTime;
+-            if (end == null || end.trim().length() == 0) {
+-                endPeriodTime = System.currentTimeMillis();
+-            } else {
+-                endPeriodTime = Long.parseLong(end);
+-            }
+-            boolean canUseOld = httpServletRequest.getParameter("nocache") == null;
+-            xml.startDocument();
+-            String result = exportClustersChangesService.exportClustersChanges(
+-                    startPeriodTime, endPeriodTime, canUseOld
+-            );
+-            if (result == null) {
+-                throw new RuntimeException("Unable to import");
+-            }
+-            xml.tag("result", result);
++        xml.startDocument();
++        String result = exportClustersChangesService.exportClustersChanges(
++            startPeriodTime, endPeriodTime, canUseOld
++        );
++        if (result == null) {
++            throw new RuntimeException("Unable to import");
++        }
++        xml.tag("result", result);
+-        } catch (IOException e) {
+-            log.error(e);
+-            throw new RuntimeException("Unable to import", e);
+-        }
++    }
+-    }
+-
+ }
