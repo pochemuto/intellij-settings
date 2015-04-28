@@ -1,8 +1,8 @@
 <application>
   <component name="ScratchFileService">
+    <file url="file://$APPLICATION_CONFIG_DIR$/scratches/notes" value="TEXT" />
     <file url="file://$APPLICATION_CONFIG_DIR$/scratches/scratch" value="JAVA" />
     <file url="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1" value="TEXT" />
-    <file url="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2" value="TEXT" />
     <file url="file://$APPLICATION_CONFIG_DIR$/scratches/stacktrace" value="TEXT" />
   </component>
 </application>
