@@ -7,6 +7,7 @@
       <mapping pattern="conffiles" type="PLAIN_TEXT" />
       <mapping pattern="extractor" type="PLAIN_TEXT" />
       <mapping pattern=".gitattributes" type="PLAIN_TEXT" />
+      <mapping ext="properies" type="PLAIN_TEXT" />
       <mapping ext="genp" type="PLAIN_TEXT" />
       <mapping ext="processor" type="PLAIN_TEXT" />
       <mapping pattern="points.xml" type="XML" />

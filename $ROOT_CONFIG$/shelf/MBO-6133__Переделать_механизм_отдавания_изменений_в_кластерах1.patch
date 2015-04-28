@@ -3,7 +3,7 @@ IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
---- ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/db/VisualClusterService.java	(revision 204178)
+--- ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/db/VisualClusterService.java	(revision 204180)
 +++ ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/db/VisualClusterService.java	(revision )
 @@ -88,36 +88,6 @@
          void process(T c) throws Exception;
@@ -207,7 +207,7 @@ IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
---- ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/imports/clusters/ImportVisualClustersService.java	(revision 204178)
+--- ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/imports/clusters/ImportVisualClustersService.java	(revision 204180)
 +++ ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/imports/clusters/ImportVisualClustersService.java	(revision )
 @@ -8,6 +8,7 @@
  import ru.yandex.common.util.collections.CollectionUtils;
@@ -271,7 +271,7 @@ IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
---- ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/imports/clusters/ExportClustersChangesService.java	(revision 204178)
+--- ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/imports/clusters/ExportClustersChangesService.java	(revision 204180)
 +++ ../../svn/mbo/ng/trunk/mbo-core/src/java/ru/yandex/market/mbo/imports/clusters/ExportClustersChangesService.java	(revision )
 @@ -2,11 +2,13 @@
  
@@ -395,7 +395,7 @@ IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
---- ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/config/mbo-http-exporter/http-exporter-config.xml	(revision 204178)
+--- ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/config/mbo-http-exporter/http-exporter-config.xml	(revision 204180)
 +++ ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/config/mbo-http-exporter/http-exporter-config.xml	(revision )
 @@ -214,6 +214,7 @@
      <bean id="navigationServlet" class="ru.yandex.market.export.navigation.CatalogNavigationServlet"/>
@@ -405,6 +405,14 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
  
      <bean id="categoryTreeYamlServlet" class="ru.yandex.market.export.categories.CategoryTreeYamlServlet"/>
  
+@@ -248,6 +249,7 @@
+                 <entry key="cataloger-mobile-dump" value-ref="catalogerMobileDumpServlet"/>
+                 <entry key="category-parameters" value-ref="categoryParmetersYamlServlet"/>
+                 <entry key="clusters-changes" value-ref="exportClustersChangesServlet"/>
++                <entry key="clusters-changes-v2" value-ref="exportClustersChangesServletFromDb"/>
+                 <entry key="ping" value-ref="pingServlet"/>
+             </map>
+         </property>
 Index: ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/ru/yandex/market/export/clusters/ExportClustersChangesFromDbServlet.java
 IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
@@ -454,7 +462,7 @@ IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
---- ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/ru/yandex/market/export/clusters/ExportClustersChangesServlet.java	(revision 204178)
+--- ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/ru/yandex/market/export/clusters/ExportClustersChangesServlet.java	(revision 204180)
 +++ ../../svn/mbo/ng/trunk/mbo-http-exporter/src/java/ru/yandex/market/export/clusters/ExportClustersChangesServlet.java	(revision )
 @@ -2,10 +2,7 @@
  
